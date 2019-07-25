@@ -25,7 +25,3 @@ class GSpreadReader(object):
     def get_worksheet_title_list(self) -> list:
         return [wks.title for wks in self._sheet.worksheets()]
     
-
-    
-            
-    
