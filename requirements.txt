@@ -1,0 +1,7 @@
+Flask==1.0.2
+slackclient==2.0.0
+slackeventsapi==2.1.0
+python-dotenv==0.10.1
+websocket-client==0.44.0
+gspread==3.1.0
+oauth2client==4.1.3
