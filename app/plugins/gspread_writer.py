@@ -48,7 +48,11 @@ class GSpreadWriter(object):
             * row 2: user_name list
             '''
             worksheet = self._sheet.worksheet(term)
-            column = worksheet.find(name).col
+            try:
+                column = worksheet.find(name).col
+            except CellNotFound:
+                column = worksheet.col_count+1
+                
             for row in range(3,33):
                 worksheet.update_cell(row, column, result_list[row-3])
 
@@ -82,6 +86,10 @@ class GSpreadWriter(object):
             * row 11: `専門科目` str_list
             '''
             worksheet = self._sheet.sheet1
-            column = worksheet.find(name).col
+            try:
+                column = worksheet.find(name).col
+            except CellNotFound:
+                column = worksheet.col_count+1
+                
             for row in range(3,12):
                 worksheet.update_cell(row, column, result_list[row-3])
