@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 import slack
 from slackclient import SlackClient
-from slackbot_framework.bot import listen_to
-from slackbot_framework.bot import respond_to
+from slackbot.bot import listen_to
+from slackbot.bot import respond_to
 
 @listen_to("bye")
 def bye_send(event: dict, client: SlackClient):

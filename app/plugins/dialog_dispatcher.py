@@ -2,8 +2,8 @@
 import slack
 import settings
 from slackclient import SlackClient
-from slackbot_framework.bot import slash_command
-from slackbot_framework.bot import interactive_message
+from slackbot.bot import slash_command
+from slackbot.bot import interactive_message
 from .gspread_reader import GSpreadReader
 from .gspread_writer import GSpreadWriter
 

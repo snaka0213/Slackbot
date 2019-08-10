@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from slackbot_framework.bot import Bot
+from .bot import Bot
 
 def main():
     bot = Bot()

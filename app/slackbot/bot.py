@@ -3,8 +3,8 @@ import settings
 from flask import Flask
 from slackclient import SlackClient
 from slackeventsapi import SlackEventAdapter
-from slackbot_framework.manager import PluginsManager
-from slackbot_framework.dispatcher import MessageDispatcher
+from .manager import PluginsManager
+from .dispatcher import MessageDispatcher
 
 class Bot(object):
     def __init__(self):
