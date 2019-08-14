@@ -88,7 +88,7 @@ class GSpreadWriter(object):
             worksheet = self._sheet.sheet1
             try:
                 column = worksheet.find(name).col
-            except CellNotFound:
+            except gspread.exceptions.CellNotFound:
                 column = worksheet.col_count+1
                 
             for row in range(3,12):
