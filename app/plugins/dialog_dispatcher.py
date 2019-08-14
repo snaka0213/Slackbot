@@ -250,7 +250,7 @@ def submission_parse(payload: dict, client: SlackClient):
             dialog_type = "subject"
 
         if dialog_type is not None:
-            writer.write(submission, type)
+            writer.write(submission, dialog_type)
             text = "Submission Accepted! :tada:"
 
         notification = client.api_call(
