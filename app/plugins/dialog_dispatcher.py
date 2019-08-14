@@ -239,16 +239,17 @@ def submission_parse(payload: dict, client: SlackClient):
         callback_id = payload["callback_id"]
         writer = GSpreadWriter()
         writer.login()
-
+        
+        dialog_type = None
         if "schedule" in callback_id:
             writer.open(settings.SCHEDULE_SHEET_FILE_NAME)
-            type = "suchedule"
+            dialog_type = "suchedule"
 
         if "subject" in callback_id:
             writer.open(settings.SUBJECT_SHEET_FILE_NAME)
-            type = "subject"
+            dialog_type = "subject"
 
-        if type:
+        if dialog_type is not None:
             writer.write(submission, type)
             text = "Submission Accepted! :tada:"
 
