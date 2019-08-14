@@ -243,7 +243,7 @@ def submission_parse(payload: dict, client: SlackClient):
         dialog_type = None
         if "schedule" in callback_id:
             writer.open(settings.SCHEDULE_SHEET_FILE_NAME)
-            dialog_type = "suchedule"
+            dialog_type = "schedule"
 
         if "subject" in callback_id:
             writer.open(settings.SUBJECT_SHEET_FILE_NAME)
